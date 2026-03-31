@@ -1,0 +1,35 @@
+id: test-strategy-and-regression-design
+name:
+  zh-CN: 测试策略与回归设计提示词
+  en: Test Strategy and Regression Design Prompt
+domain: quality
+prompt_type: workflow
+summary: A workflow prompt for designing focused test strategy, regression coverage, failure modes, and minimum verification evidence before or alongside implementation.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Help teams design high-value validation plans that cover critical paths, boundary conditions, regressions, and minimum acceptable evidence without bloating test scope.
+audience:
+  - software engineers
+  - qa engineers
+  - ai coding agents
+inputs:
+  - Requirement or change description
+  - Impacted modules or risks
+  - Existing test baseline
+outputs:
+  - test matrix
+  - regression scope
+  - verification evidence plan
+tags:
+  - testing
+  - regression
+  - validation
+  - quality
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
