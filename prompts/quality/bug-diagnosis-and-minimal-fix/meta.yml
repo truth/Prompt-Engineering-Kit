@@ -1,0 +1,35 @@
+id: bug-diagnosis-and-minimal-fix
+name:
+  zh-CN: 缺陷诊断与最小修复提示词
+  en: Bug Diagnosis and Minimal Fix Prompt
+domain: quality
+prompt_type: workflow
+summary: A debugging workflow prompt for isolating root causes, avoiding shotgun fixes, and delivering the smallest correct change with verification.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Guide an AI or engineer through disciplined bug diagnosis, root cause validation, minimal repair, and evidence-based verification.
+audience:
+  - software engineers
+  - maintainers
+  - ai coding agents
+inputs:
+  - Error symptom or failure description
+  - Relevant logs, stack traces, or reproduction steps
+  - Impacted module or suspected change window
+outputs:
+  - Root cause hypothesis
+  - Minimal fix plan
+  - Verification notes
+tags:
+  - debugging
+  - bugfix
+  - root-cause-analysis
+  - quality
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
