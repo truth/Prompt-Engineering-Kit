@@ -1,0 +1,35 @@
+id: release-readiness-and-rollback
+name:
+  zh-CN: 发布就绪与回滚提示词
+  en: Release Readiness and Rollback Prompt
+domain: release-operations
+prompt_type: checklist
+summary: A structured release checklist prompt covering deployment readiness, configuration safety, migration order, observability checks, rollback triggers, and post-release validation.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Help teams determine whether a change is actually safe to ship, what must be checked before release, and how to roll back if release quality degrades.
+audience:
+  - release managers
+  - maintainers
+  - software engineers
+inputs:
+  - Release scope
+  - Deployment dependencies
+  - Configuration and migration details
+outputs:
+  - release checklist
+  - go/no-go recommendation
+  - rollback plan
+tags:
+  - release
+  - rollback
+  - deployment
+  - operations
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
