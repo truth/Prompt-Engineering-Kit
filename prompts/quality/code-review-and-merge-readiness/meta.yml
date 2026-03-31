@@ -1,0 +1,35 @@
+id: code-review-and-merge-readiness
+name:
+  zh-CN: 代码审查与合并就绪提示词
+  en: Code Review and Merge Readiness Prompt
+domain: quality
+prompt_type: checklist
+summary: A structured review prompt for checking architecture, correctness, risk, test coverage, and merge readiness before code integration.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Help reviewers assess whether a change should merge now, needs revision, or should be blocked due to correctness, design, or operational risk.
+audience:
+  - reviewers
+  - maintainers
+  - ai coding agents
+inputs:
+  - Code diff
+  - Related requirement or task context
+  - Test and verification results
+outputs:
+  - Review findings
+  - Merge recommendation
+  - Risk summary
+tags:
+  - code-review
+  - merge-readiness
+  - quality-gate
+  - risk
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
