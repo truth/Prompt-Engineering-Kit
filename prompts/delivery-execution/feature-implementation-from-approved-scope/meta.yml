@@ -1,0 +1,35 @@
+id: feature-implementation-from-approved-scope
+name:
+  zh-CN: 已确认范围的功能实现提示词
+  en: Feature Implementation from Approved Scope Prompt
+domain: delivery-execution
+prompt_type: workflow
+summary: A disciplined implementation workflow for turning approved requirements into bounded code changes, explicit file plans, validation steps, and controlled delivery risk.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Guide engineers or AI coding agents from approved scope to concrete implementation plans, file-level changes, verification obligations, and delivery boundaries.
+audience:
+  - software engineers
+  - ai coding agents
+  - technical leads
+inputs:
+  - Approved requirement or task description
+  - Existing codebase context
+  - Constraints and acceptance criteria
+outputs:
+  - Implementation plan
+  - affected-file strategy
+  - verification checklist
+tags:
+  - implementation
+  - delivery
+  - scope-control
+  - execution
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
