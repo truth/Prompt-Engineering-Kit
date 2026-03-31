@@ -1,0 +1,36 @@
+id: software-engineering-project-preparation
+name:
+  zh-CN: 软件工程前期准备提示词
+  en: Software Engineering Project Preparation Prompt
+domain: project-inception
+prompt_type: workflow
+summary: Step-by-step preparation prompt for turning a raw software idea into requirements, architecture decisions, and an executable delivery plan before coding starts.
+status: active
+purpose: Guide project discovery and pre-coding preparation through staged requirement clarification, technology selection, architecture design, and task breakdown.
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+audience:
+  - product-minded engineers
+  - software architects
+  - full-stack developers
+inputs:
+  - One-sentence project description
+  - Target platforms
+  - Business and technical constraints
+outputs:
+  - PRD summary
+  - technology selection rationale
+  - architecture outline
+  - executable task plan
+tags:
+  - project-planning
+  - requirements
+  - architecture
+  - task-breakdown
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+version: 1.0.0
+last_reviewed: 2026-03-31

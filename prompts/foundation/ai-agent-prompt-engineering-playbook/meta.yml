@@ -1,0 +1,34 @@
+id: ai-agent-prompt-engineering-playbook
+name:
+  zh-CN: 全栈 AI Agent 提示词工程总纲
+  en: Full-Stack AI Agent Prompt Engineering Playbook
+domain: foundation
+prompt_type: playbook
+summary: System-level prompt playbook for AI-driven software delivery across requirements, architecture, backend, database, frontend, and review stages.
+status: active
+purpose: Standardize how AI agents participate across the software lifecycle with explicit constraints, layered responsibilities, and architecture-aware execution guidance.
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+audience:
+  - full-stack developers
+  - architects
+  - ai workflow designers
+inputs:
+  - Project architecture constraints
+  - Development workflow expectations
+  - Contract and schema conventions
+outputs:
+  - Stage-specific agent prompts
+  - Structured implementation guidance
+tags:
+  - ai-agent
+  - prompt-engineering
+  - software-lifecycle
+  - architecture
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+version: 1.0.0
+last_reviewed: 2026-03-31
