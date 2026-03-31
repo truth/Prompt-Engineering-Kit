@@ -1,0 +1,35 @@
+id: safe-refactoring-and-migration
+name:
+  zh-CN: 安全重构与迁移提示词
+  en: Safe Refactoring and Migration Prompt
+domain: quality
+prompt_type: workflow
+summary: A structured prompt for planning and executing refactors or migrations with dependency awareness, rollback thinking, and compatibility checks.
+status: active
+version: 1.0.0
+canonical_lang: zh-CN
+langs:
+  - zh-CN
+  - en
+translation_policy: canonical-first
+purpose: Help break large structural changes into safe, verifiable increments while controlling regression and compatibility risk.
+audience:
+  - maintainers
+  - software architects
+  - ai coding agents
+inputs:
+  - Refactor or migration target
+  - Affected modules and dependencies
+  - Compatibility constraints
+outputs:
+  - Incremental migration plan
+  - risk controls
+  - rollback and verification strategy
+tags:
+  - refactoring
+  - migration
+  - compatibility
+  - quality
+source_of_truth: prompt.zh-CN.md
+change_policy: minor-for-structure-patch-for-copyedits
+last_reviewed: 2026-03-31
