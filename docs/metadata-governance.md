@@ -141,6 +141,56 @@ Before merging changes to a prompt asset, check:
 4. Does `summary` describe the asset honestly?
 5. Does the version change match the scale of the prompt change?
 
+## Index Synchronization Rules
+
+`meta.yml` and `prompts-index.md` do not own the same level of truth.
+
+### Source of truth split
+
+- `meta.yml` is the **detailed source of truth** for each asset.
+- `prompts-index.md` is the **repository-level summary catalog**.
+
+### Fields that must stay synchronized
+
+For every asset row in `prompts-index.md`, the following values must match `meta.yml`:
+
+| Index Column | Source Field in `meta.yml` |
+| --- | --- |
+| `Slug` | `id` |
+| `Domain` | `domain` |
+| `Type` | `prompt_type` |
+| `中文标题` | `name.zh-CN` |
+| `English Title` | `name.en` |
+| `Canonical` | `canonical_lang` |
+| `Locales` | `langs` |
+| `Status` | `status` |
+| `Version` | `version` |
+| `Last Reviewed` | `last_reviewed` |
+
+### Update rules
+
+1. When creating a new asset, update `meta.yml` first, then add the matching row to `prompts-index.md` in the same change set.
+2. When changing any mirrored metadata field, update `meta.yml` and `prompts-index.md` together.
+3. When changing non-index fields such as `purpose`, `inputs`, `outputs`, `source_of_truth`, or `change_policy`, only `meta.yml` must change unless the asset summary should also change.
+4. `prompts-index.md` must never contain fields that become a second semantic owner of asset meaning. It is a catalog, not a second metadata store.
+5. If `meta.yml` and `prompts-index.md` conflict, reviewers must treat `meta.yml` as authoritative and require the index to be corrected before merge.
+
+### Ordering rules
+
+1. Keep index rows grouped by `Domain`.
+2. Within each domain, sort rows by `Slug` in ascending ASCII order.
+3. Do not reorder rows casually in unrelated changes.
+
+### Minimal sync review checklist
+
+Before merging a change that touches assets, check:
+
+1. Does every asset directory have exactly one matching row in `prompts-index.md`?
+2. Do `Slug`, `Domain`, names, `Status`, and `Version` match the asset `meta.yml`?
+3. If a new locale was added or removed, was the `Locales` column updated?
+4. If `last_reviewed` changed in `meta.yml`, was the index updated too?
+5. If an asset is deprecated or archived, does the index reflect that lifecycle state?
+
 ## Recommended Minimal Template
 
 ```yaml
